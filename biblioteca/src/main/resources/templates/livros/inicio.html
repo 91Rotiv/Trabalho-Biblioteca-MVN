@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sistema de Biblioteca</title>
+
+</head>
+
+<body>
+
+    <h1 th:text="'Sistema de Biblioteca'">
+        Sistema de Biblioteca
+    </h1>
+
+    <p>Bem-vindo ao nosso sistema de gerenciamento!</p>
+
+    <nav>
+        <a th:href="@{/livros}">Livros</a>
+        <a th:href="@{/autores}">Autores</a>
+        <a th:href="@{/categorias}">Categorias</a>
+        <a th:href="@{/usuarios}">Usuários</a>
+        <a th:href="@{/emprestimos}">Empréstimos</a>
+    </nav>
+
+    <hr>
+
+    <h2>Informações do Livro</h2>
+
+    <p>
+        <strong>Título:</strong>
+        <span th:text="${livro.titulo}"></span>
+    </p>
+
+    <p>
+        <strong>Autor:</strong>
+        <span th:text="${livro.autor}"></span>
+    </p>
+
+    <p>
+        <strong>ISBN:</strong>
+        <span th:text="${livro.isbn}"></span>
+    </p>
+    
+
+
+    <section>
+        <h2>Gerenciamento de Livros</h2>
+        <p>Cadastre um novo livro na biblioteca.</p>
+        <a th:href="@{/livros/novo}">Cadastrar Novo Livro</a>
+    </section>
+
+</body>
+</html>

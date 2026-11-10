@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Livro cadastrado</title>
+</head>
+<body>
+    <h1>Livro cadastrado!</h1>
+
+    <p>Título: <span th:text="${livro.titulo}"></span></p>
+    <p>Autor: <span th:text="${livro.autor}"></span></p>
+    <p>ISBN: <span th:text="${livro.isbn}"></span></p>
+
+    <p><a th:href="@{/livros/novo}">Cadastrar outro livro</a></p>
+    <p><a th:href="@{/livros}">Voltar ao início</a></p>
+</body>
+</html>
